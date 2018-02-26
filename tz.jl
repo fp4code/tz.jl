@@ -454,6 +454,10 @@ WSAC createseg SGOP closeseg WSAC
 
 =#
 
+if !ispath("figures")
+    mkdir("figures")
+end
+
 tt = linspace(0,1.0,150)
 Plots.plot(tt, ex[tt, 0], label="z=0", title="\$E_x(t)\$", xlabel="\$t\$", ylabel="\$E_x\$")
 Plots.plot!(tt, ex[tt, 0.24], label="z=0.24")
